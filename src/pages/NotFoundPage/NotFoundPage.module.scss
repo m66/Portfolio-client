@@ -1,0 +1,21 @@
+.errorPage {
+    text-align: center;
+
+    h1 {
+        font-size: 80px;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 25px;
+        color: var(--secondary-text-color);
+    }
+}

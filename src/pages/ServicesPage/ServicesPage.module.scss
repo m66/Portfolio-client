@@ -1,0 +1,11 @@
+.servicesPage {
+    display: flex;
+    flex-direction: column;
+
+    .servicesList {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,26 @@
+::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.inputWrapper {
+    width: 100%;
+}
+
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.inputElement,
+.textareaElement {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    overflow: hidden;
+    outline: none;
+}
+
+.textareaElement {
+    min-height: 100px;
+    resize: vertical;
+}

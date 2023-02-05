@@ -1,0 +1,52 @@
+.homePage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .contentWrapper {
+        h2,
+        h3 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin-bottom: 60px;
+            line-height: 22px;
+            font-weight: 500;
+        }
+
+        span {
+            font-size: 30px;
+            font-weight: 800;
+            font-family: 'Clicker Script', cursive !important;
+            font-family: 40px;
+            color: var(--primary-color);
+        }
+
+        .mobileImg {
+            margin: 0 auto;
+            margin-bottom: 40px;
+            display: none;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .homePage {
+        flex-direction: column;
+    }
+
+    .mobileImg {
+        display: flex !important;
+    }
+
+    .desctopImg {
+        display: none;
+    }
+    .btnWrapper {
+        display: none;
+    }
+}

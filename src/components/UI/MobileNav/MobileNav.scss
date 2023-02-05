@@ -1,0 +1,129 @@
+.mobileNav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    position: fixed;
+    z-index: 10;
+
+    .navigation {
+        width: 400px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+
+        ul {
+            width: 350px;
+            display: flex;
+
+            li {
+                width: 70px;
+                height: 70px;
+                position: relative;
+                z-index: 15;
+
+                a {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    text-align: center;
+                    font-weight: 500;
+
+                    .icon {
+                        position: relative;
+                        display: block;
+                        line-height: 75px;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: 0.5s;
+                    }
+
+                    .text {
+                        position: absolute;
+                        font-weight: 400;
+                        font-size: 0.75em;
+                        list-style: 0.05em;
+                        transition: 0.5s;
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                }
+
+                &.active a .icon {
+                    transform: translateY(-36px);
+                }
+
+                &.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                }
+
+                &:nth-child(1).active~.indicator {
+                    transform: translateX(calc(70px * -2.5));
+                }
+
+                &:nth-child(2).active~.indicator {
+                    transform: translateX(calc(70px * -1.5));
+                }
+
+                &:nth-child(3).active~.indicator {
+                    transform: translateX(calc(70px * -0.5));
+                }
+
+                &:nth-child(4).active~.indicator {
+                    transform: translateX(calc(70px * 0.5));
+                }
+
+                &:nth-child(5).active~.indicator {
+                    transform: translateX(calc(70px * 1.5));
+                }
+            }
+        }
+    }
+
+    .indicator {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        transition: 0.5s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobileNav {
+        display: block;
+    }
+}

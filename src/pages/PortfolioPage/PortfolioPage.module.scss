@@ -1,0 +1,21 @@
+.portfolioPage {
+    .projects {
+        h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .projectsListWrapper {
+            margin: 0 auto;
+            text-align: center;
+
+            .projectsList {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                gap: 20px;
+            }
+        }
+    }
+}
